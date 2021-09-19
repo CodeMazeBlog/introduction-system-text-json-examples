@@ -147,10 +147,7 @@ namespace JsonExampleProject1
 									[{""Type"":""Cat"",""Name"":""MooMoo"",""Age"":""3.4""},
 									{""Type"":""Squirrel"",""Name"":""Sandy"",""Age"":7}]}";
 
-			var options = new JsonSerializerOptions
-			{
-				NumberHandling = JsonNumberHandling.AllowReadingFromString
-			};
+			var options = new JsonSerializerOptions(JsonSerializerDefaults.Web);
 
 			var personObject = JsonSerializer.Deserialize<Person>(jsonPerson,  options);
 
