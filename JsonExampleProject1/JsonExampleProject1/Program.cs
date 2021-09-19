@@ -131,7 +131,7 @@ namespace JsonExampleProject1
 			var options = new JsonSerializerOptions
 			{
 				WriteIndented = true, 
-				IgnoreNullValues = true
+				DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
 			};
 
 			Console.WriteLine(JsonSerializer.Serialize(person, options));
